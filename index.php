@@ -29,8 +29,9 @@
 
     <h2>Index Home Page</h2>
 
-    <footer>
 
+    <footer>
+        <h3> Example Footer</h3>
     </footer>
 </body>
 
