@@ -2,4 +2,98 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    text-align: center;
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
 }
+/* 
+.header__title {
+    margin-bottom: 10px;
+}
+
+.headers {
+    display: flex;
+    justify-content: center;
+}
+
+.headers__tabs {
+    margin: 0 10px;
+} */
+
+/* Nav Bar */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    padding: 8px;
+    background-color: #dddddd;
+  }
+  
+  .active {
+    background-color: #4CAF50;
+  }
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    /* background-size: cover; */
+    padding: 0;
+    animation: bgcolor infinite 30s;
+    font-family: Arial, sans-serif;
+}
+
+p {
+    margin: 25px;
+}
+
+/* Animation of Background */
+@keyframes bgcolor {
+    0%{
+        background: #00c9ed;
+    }
+    50%{
+        background: #c8b017;
+    }
+    100%{
+        background: #00c9ed;
+    }
+}
+
+/* Card */
+.card-container {
+    /* trial colors lang para makita ko agad yung card */
+    background: #b01010; 
+    box-shadow:  18px 18px 40px #5f0c0c,
+                -18px -18px 40px #4d0a0a;
+    width: 400px; 
+    height: 400px; 
+    perspective: 500px;
+    border-radius: 50px;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
