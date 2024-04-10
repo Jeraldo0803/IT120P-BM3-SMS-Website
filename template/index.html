@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
-    <link rel="stylesheet" href="index.css">
+<html data-bs-theme="light" lang="en">
 
-    <!-- update the version number as needed -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>SMS</title>
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/Navbar-Right-Links-icons.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+<body style="background: rgba(255,255,255,0);"><!-- update the version number as needed -->
     <script defer src="/__/firebase/10.10.0/firebase-app-compat.js"></script>
     <!-- include only the Firebase features as you need -->
     <script defer src="/__/firebase/10.10.0/firebase-auth-compat.js"></script>
@@ -24,99 +28,7 @@
     -->
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-
-
-  </head>
-  <body>
-    <!-- Better ata if nav bar na lang instead of a header? -->
-    <!-- <header>
-        <div class="header__title">
-            <h2>IT120P-BM3-Taransfer</h2>
-        </div>
-        <div class="headers">
-            <div class="header__tabs">
-                <a href="#">Home Page</a>
-            </div>
-            <br>
-            <div class="header__tabs">
-                <a href="#">Services</a>
-            </div>
-            <br>
-            <div class="header__tabs">
-                <a href="#">About</a>
-            </div>
-        </div>
-    </header> -->
-    <button onclick="googleLogin()">Login with Google</button>
-
-    <div class="header">
-      <p>What Taransfer is all about?</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis error eos, distinctio nihil in officia nesciunt, necessitatibus et id blanditiis culpa quis fugit fugiat velit incidunt! Cumque fugiat maiores obcaecati!</p>
-  </div>
-
-  <!-- Nav Bar pero hindi ko pa completely mapagana -->
-  <!-- <ul>
-      <li><a class="active" href="#home">Home</a></li>
-      <li><a href="#">About US</a></li>
-      <li><a href="#">Services</a></li>
-  </ul> -->
-  
-
-  <!-- Creation of the Card -->
-  <div class="card-container">
-      <div>
-          <h4>Index Home Page</h4>
-          <br>
-          <form action="/upload" method="post" enctype="multipart/form-data">
-              <input type="file" name="fileToUpload" id="fileToUpload">
-              <input type="submit" value="Upload File">
-          </form>
-      </div>
-    <br>
-  </div>
-
-<!-- Start of the Footer -->
-  <footer class="footer">
-      <div class="container">
-          <div class="row">
-              <div class="footer-col">
-                  <h3> Example Footer</h3>
-                  <ul>
-                      <li><a href="#">Home Page</a></li>
-                      <li><a href="#">About Us</a></li>
-                      <li><a href="#">Services</a></li>
-                  </ul>
-              </div>
-          </div>
-      </div>
-  </footer>
-
-
-
-    <!--<div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>-->
-    <p id="load">Firebase SDK Loading&hellip;</p>
-    <!--<script src="app.js"></script>-->
-
-    <script>
+<script>
       document.addEventListener('DOMContentLoaded', function() {
         const loadEl = document.querySelector('#load');
         // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
@@ -174,7 +86,47 @@
     }
     
     </script>
+    <nav class="navbar navbar-expand-md bg-body py-3">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span class="text-primary"><strong>Taransfer</strong></span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-2">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about_us.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                </ul>
+            </div><button class="btn btn-outline-primary" type="button" style="padding-right: 20px;padding-left: 20px;">Login</button>
+        </div>
+    </nav>
+    <div class="container-fluid py-4 py-xl-5" style="height: 80vh;">
+        <div class="row gy-4 gy-md-0" style="height: 100%;">
+            <div class="col align-self-center">
+                <div class="text-white p-7 p-md-5" style="width: 80%;margin-left: 20%;">
+                    <h2 class="fw-bold text-white mb-3"><span style="font-weight: normal !important;">What </span>Tara<span style="font-weight: normal !important;">nsfer is all about?</span></h2>
+                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis error eos, distinctio nihil in officia nesciunt, necessitatibus et id blanditiis culpa quis fugit fugiat velit incidunt! Cumque fugiat maiores obcaecati!</p><button class="btn btn-light" type="button" onclick="googleLogin()">Login with <strong>Google</strong></button>
+                </div>
+            </div>
+            <div class="col-5 d-md-flex align-items-md-center">
+                <div class="card" style="margin-right: 50px;border-radius: 15px;">
+                    <div class="card-body fs-1 text-center">
+                        <h2 class="card-title">Taransfer</h2>
+                        <form enctype="multipart/form-data" method="post" action="/upload">
+                            <h5 class="mb-2">Upload your file</h5><input class="form-control" type="file" id="fileToUpload" name="fileToUpload" style="margin-top: 16px;"><input class="btn btn-primary" type="submit" value="Tara! Upload!" style="margin-top: 16px;width: 60%;">
+                            <h5 class="mb-2" style="margin-top: 30px;">Receive your file</h5><input class="form-control" type="text" value="Enter Unique ID">
+                        </form><input class="btn btn-primary" type="submit" value="Tara! Download!" style="margin-top: 16px;width: 60%;margin-bottom: 16px;">
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-md fixed-bottom bg-dark">
+        <div class="container-fluid">
+            <div class="text-center" style="width: 100%;">
+                <p class="text-light mb-0">Copyright © 2024 Taransfer</p>
+            </div>
+        </div>
+    </nav>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
 
-
-  </body>
 </html>
