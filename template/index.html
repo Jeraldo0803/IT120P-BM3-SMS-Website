@@ -61,6 +61,7 @@
             </div>
         </div>
     </header> -->
+    <button onclick="googleLogin()">Login with Google</button>
 
     <div class="header">
       <p>What Taransfer is all about?</p>
@@ -113,6 +114,7 @@
       <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
     </div>-->
     <p id="load">Firebase SDK Loading&hellip;</p>
+    <!--<script src="app.js"></script>-->
 
     <script>
       document.addEventListener('DOMContentLoaded', function() {
@@ -151,6 +153,28 @@
           loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
         }
       });
+
+
+      document.addEventListener("DOMContentLoaded", event => {
+        const app = firebase.app();
+    });
+    
+    
+    function googleLogin() {
+        const provider = new firebase.auth.GoogleAuthProvider();
+        
+        firebase.auth().signInWithPopup(provider)
+            .then(result => {
+                const user = result.user;
+                document.write(`Hello ${user.displayName}`);
+                console.log(user);
+            })
+            .catch(console.log)
+    
+    }
+    
     </script>
+
+
   </body>
 </html>
