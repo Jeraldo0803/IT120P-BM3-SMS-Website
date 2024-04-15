@@ -27,6 +27,8 @@
       to avoid connecting the SDK to running emulators.
     -->
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <script defer src="script.js"></script>
+
 </head>
 
 <body>
@@ -78,10 +80,14 @@
                         <div id="ShowUniqueID" hidden>
                           <p>Unique ID</p><input type="text" id="showunique" value="23456" disabled></input>
                         </div>
-                        <form>
-                            <h5 class="mb-2" style="margin-top: 30px;">Receive your file</h5><input class="form-control" type="text" value="Enter Unique ID">
-                        </form><input class="btn btn-primary" type="submit" value="Tara! Download!" style="margin-top: 16px;width: 60%;margin-bottom: 16px;">
-                        <div></div>
+                        <div>
+                          <h5 class="mb-2" style="margin-top: 30px;">Receive your file</h5>
+                          <input class="form-control" type="text" id="uniqueIdInput" placeholder="Enter Unique ID">
+                      </div>
+                      <button class="btn btn-primary" onclick="showimage()" style="margin-top: 16px;width: 60%;margin-bottom: 16px;">Tara! Download!</button>
+
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -94,10 +100,6 @@
             </div>
         </div>
     </nav>
-    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-storage.js"></script>
-<script src="script.js"></script>
-
     <script src="bootstrap.min.js"></script>
 </body>
 

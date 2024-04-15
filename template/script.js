@@ -1,5 +1,3 @@
-
-
 const firebaseConfig = {
     apiKey: "AIzaSyAfuQXmS9a5ENMLUTrgVUM6krnWvA1rNUg",
     authDomain: "taransferrr.firebaseapp.com",
@@ -14,11 +12,11 @@ const firebaseConfig = {
   console.log("Script loaded successfully.");
 
   // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 
 
     // Reference messages collection
-    var messagesRef = firebase.database().ref("image");
+var messagesRef = firebase.database().ref("image");
 
     // Listen for form submit
 
