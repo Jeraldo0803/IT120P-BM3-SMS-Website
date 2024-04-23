@@ -58,8 +58,10 @@
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about_us.html">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+
                 </ul>
-            </div><button class="btn btn-outline-primary" type="button" style="padding-right: 20px;padding-left: 20px;">Login</button>
+            </div>
+            <button class="btn btn-outline-primary" type="button" style="padding-right: 20px;padding-left: 20px;">Login</button>
         </div>
     </nav>
     <div class="container-fluid py-4 py-xl-5" style="height: 80vh;">
@@ -67,13 +69,14 @@
             <div class="col align-self-center">
                 <div class="text-white p-7 p-md-5" style="width: 80%;margin-left: 20%;">
                     <h2 class="fw-bold text-white mb-3"><span style="font-weight: normal !important;">What </span>Tara<span style="font-weight: normal !important;">nsfer is all about?</span></h2>
-                    <p class="mb-4">Taransfer is a free online service where people can share any types of files in an instant. Tara! Transfer files with ease, fast, and convinient</p><button class="btn btn-light" type="button" onclick="googleLogin()">Login with <strong>Google</strong></button>
+                    <p class="mb-4">Taransfer is a free online service where people can share any types of files in an instant. Tara! Transfer files with ease, quick, and convinient</p><button class="btn btn-light" type="button" onclick="googleLogin()">Login with <strong>Google</strong></button>
                 </div>
             </div>
             <div class="col-5 d-md-flex align-items-md-center">
                 <div class="card" style="margin-right: 50px;border-radius: 15px;">
                     <div class="card-body fs-1 text-center">
                         <h2 class="card-title">Taransfer</h2>
+<<<<<<< Updated upstream
                         <h5 class="mb-2">Upload your file</h5>
                         <input class="form-control" type="file" id="fileToUpload" name="fileToUpload" style="margin-top: 16px;">
                         <input class="btn btn-primary" type="button" id="upload" value="Tara! Upload!" onclick="uploadImage()" style="margin-top: 16px;width: 60%;">
@@ -88,6 +91,17 @@
 
 
                         </div>
+=======
+                        <form enctype="multipart/form-data" method="post" action="/upload">
+                            <h6 class="mb-2">Upload your file and Enter the Receiver's Email</h6>
+                            <input class="form-control" type="file" id="fileToUpload" name="fileToUpload" style="margin-top: 16px;">
+                            <!-- <input class="btn btn-primary" type="submit" value="Tara! Upload!" style="margin-top: 16px;width: 60%;"> -->
+                            <!-- <h5 class="mb-2" style="margin-top: 16px;">Enter Email</h5> -->
+                            <input class="form-control" type="text" placeholder="Enter email" name="email" style="margin-top: 16px;"><input class="btn btn-primary" type="submit" value="Tara! Send It!" style="margin-top: 16px;width: 60%;">
+                            <h5 class="mb-2" style="margin-top: 30px;">Receive your file</h5><input class="form-control" type="text" value="Enter Unique ID">
+                        </form><input class="btn btn-primary" type="submit" value="Tara! Download!" style="margin-top: 16px;width: 60%;margin-bottom: 16px;">
+                        <div></div>
+>>>>>>> Stashed changes
                     </div>
                 </div>
             </div>
