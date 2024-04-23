@@ -8,20 +8,24 @@ const firebaseConfig = {
     appId: "1:392145276434:web:cc3402041a0b5ee92492cb",
     measurementId: "G-K4JHZ6219P"
   };
-    
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    
+
+  console.log("Script loaded successfully.");
+
+  // Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+
     // Reference messages collection
-    var messagesRef = firebase.database().ref("image");
-    
+var messagesRef = firebase.database().ref("image");
+
     // Listen for form submit
-    
+
     function uploadImage() {
-      if (document.getElementById("file").value != "") {
+      console.log("uploadImage() function called.");
+      if (document.getElementById("fileToUpload").value != "") {
         var uploadtext = document.getElementById("upload").innerHTML;
         document.getElementById("upload").innerHTML = "Uploading...";
-        var file = document.getElementById("file").files[0];
+        var file = document.getElementById("fileToUpload").files[0];
         var storageRef = firebase.storage().ref("images/" + file.name);
         var uploadTask = storageRef.put(file);
         uploadTask.on(
@@ -51,16 +55,18 @@ const firebaseConfig = {
         }, 2000);
       }
     }
-    
-    
-    
+
+
+
     // Save message to firebase
     function saveMessage(downloadURL) {
       var newMessageRef = messagesRef.push();
       var unique = createUniquenumber();
       // Hidding recive file div
       var x = document.getElementById("downloadiv");
-      x.style.display = "none";
+      if (x) {
+        x.style.display = "none";
+      }
       var showUnique = document.getElementById("ShowUniqueID");
       var shU = document.getElementById("showunique");
       shU.value = unique;
@@ -72,9 +78,9 @@ const firebaseConfig = {
       });
       document.getElementById("upload").innerHTML = "Upload Successful";
       //Make file input empty
-      document.getElementById("file").value = "";
+      document.getElementById("fileToUpload").value = "";
     }
-    
+
     function createUniquenumber() {
       // Create a unique 5 digit number for each image which is not in the database field number yet
       var number = Math.floor(10000 + Math.random() * 90000);
@@ -89,7 +95,7 @@ const firebaseConfig = {
       });
       return number;
     }
-    
+
     function showimage() {
       var uniqueId = document.getElementById("unique").value;
       if (uniqueId == "") {
@@ -123,13 +129,13 @@ const firebaseConfig = {
       });
       // After some time if flag is still 0 then show alert
       // setTimeout(function(){
-    
+
       // if(flag == 0){
       //     alert("File not found Check the Unique ID");
       // }
       // }, 5000);
     }
-    
+
     function flesize() {
       var file = document.getElementById("file").files[0];
       // Dont allow file size greater than 100MB
@@ -140,7 +146,7 @@ const firebaseConfig = {
         document.getElementById("file").value = "";
       }
     }
-    
+
     // Click on download button when enter is pressed
     document.getElementById("unique").addEventListener("keyup", function (event) {
       event.preventDefault();
