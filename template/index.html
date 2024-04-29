@@ -26,7 +26,7 @@
       to avoid connecting the SDK to running emulators.
     -->
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-    <script async src="script.js"></script>
+    <script defer src="script.js"></script>
     <script async src="phone-auth.js"></script>
 
 </head>
@@ -71,6 +71,10 @@
                     <h2 class="fw-bold text-white mb-3"><span style="font-weight: normal !important;">What </span>Tara<span style="font-weight: normal !important;">nsfer is all about?</span></h2>
                     <p class="mb-4">Taransfer is a free online service where people can share any types of files in an instant. Tara! Transfer files with ease, quick, and convinient</p>
                     <button class="btn btn-light" type="button" onclick="googleLogin()">Login with <strong>Google</strong></button>
+
+                    <button class="btn btn-light" type="button" id="start-verification">Login with Phone</button>
+                    <input type="text" id="verification-code" placeholder="Enter Verification Code">
+                    <div id="recaptcha-container"></div>
                 </div>
             </div>
             <div class="col-5 d-md-flex align-items-md-center">
