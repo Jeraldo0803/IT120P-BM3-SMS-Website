@@ -55,16 +55,17 @@
         <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span class="text-primary"><strong>Taransfer</strong></span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-2">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about_us.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><button class="nav-link" id="home">Home</button></li>
+                    <li class="nav-item"><button class="nav-link" id="about">About</button></li>
+                    <li class="nav-item"><button class="nav-link" id="howtouse">How to Use</button></li>
 
                 </ul>
             </div>
             <button class="btn btn-outline-primary" type="button" style="padding-right: 20px;padding-left: 20px;">Login</button>
         </div>
     </nav>
-    <div class="container-fluid py-4 py-xl-5" style="height: 80vh;">
+<div id="content">
+    <div id="homePage" class="page container-fluid py-4 py-xl-5" style="height: 80vh;">
         <div class="row gy-4 gy-md-0" style="height: 100%;">
             <div class="col align-self-center">
                 <div class="text-white p-7 p-md-5" style="width: 80%;margin-left: 20%;">
@@ -88,17 +89,20 @@
                             <!-- <h5 class="mb-2" style="margin-top: 16px;">Enter Email</h5> -->
                             <input class="form-control" type="text" placeholder="Enter email" name="email" style="margin-top: 16px;">
                             <input class="btn btn-primary" value="Tara! Send It!" id="upload" onclick="uploadImage()" style="margin-top: 16px;width: 60%;">
-
-                            <div id="ShowUniqueID" block>
-                              <p>Unique ID</p><input type="text" id="showunique" value="" disabled></input>
-                            </div>
+							
+							<div class="card-body fs-1" style="padding-left:18%;">
+								<div id="ShowUniqueID" block>
+								  <h6 class="mb-2">Unique ID</h6>
+								  <input class="form-control" type="text" id="showunique" value="" disabled></input>
+								</div>
+							</div>
+							<hr>
 
                             <div class="Download" id="downloadiv">
-                              <h2>Receive File</h2>
-
-                              <input type="text" id="unique" placeholder="Enter Unique ID"><br>
-                              <center><button id="show" onclick="showimage()">Download<img id="downimg" src="download.png"
-                                    alt="none" /></button>
+                              <h6>Receive File</h6>
+                              <input class="form-control" type="text" id="unique" placeholder="Enter Unique ID">
+                              <center><button class="btn btn-primary" id="show" onclick="showimage()">Download<img id="downimg" src="download.png"
+                                    alt="" /></button>
                             </div>
                             <!--
                         <div class="Download" id="downloadiv">
@@ -106,11 +110,108 @@
                         <input class="btn btn-primary" type="submit" value="Tara! Download!" style="margin-top: 16px;width: 60%;margin-bottom: 16px;">
                         </div>
                       -->
+						</form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+	
+	<!--AAAAAAAAAAAAAAAAAAAAAAAAAAA-->
+	
+	<div id="howtousePage" class="page container text-light py-4 py-xl-5">
+		<div class="row mb-5">
+			<div class="col-md-8 col-xl-6 text-center mx-auto">
+				<h2>Heading</h2>
+				<p class="w-lg-50">Curae hendrerit donec commodo hendrerit egestas tempus, turpis facilisis nostra nunc. Vestibulum dui eget ultrices.</p>
+			</div>
+		</div>
+		<h2>Uploading</h2>
+		<div class="row">
+			<div class="col">
+				<div class="card"><img class="card-img-top w-100 d-block fit-cover" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" style="height: 200px;" />
+					<div class="card-body p-4">
+						<p class="text-primary card-text mb-0">Step 1</p>
+						<h4 class="card-title">Lorem libero donec</h4>
+						<p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card"><img class="card-img-top w-100 d-block fit-cover" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" style="height: 200px;" />
+					<div class="card-body p-4">
+						<p class="text-primary card-text mb-0">Step 2</p>
+						<h4 class="card-title">Lorem libero donec</h4>
+						<p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card"><img class="card-img-top w-100 d-block fit-cover" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" style="height: 200px;" />
+					<div class="card-body p-4">
+						<p class="text-primary card-text mb-0">Step 3</p>
+						<h4 class="card-title">Lorem libero donec</h4>
+						<p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row mb-5" style="margin-top: 48px;">
+			<div class="col-md-8 col-xl-6 text-center mx-auto"></div>
+		</div>
+		<h2>Downloading</h2>
+		<div class="row">
+			<div class="col">
+				<div class="card"><img class="card-img-top w-100 d-block fit-cover" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" style="height: 200px;" />
+					<div class="card-body p-4">
+						<p class="text-primary card-text mb-0">Step 1</p>
+						<h4 class="card-title">Lorem libero donec</h4>
+						<p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card"><img class="card-img-top w-100 d-block fit-cover" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" style="height: 200px;" />
+					<div class="card-body p-4">
+						<p class="text-primary card-text mb-0">Step 2</p>
+						<h4 class="card-title">Lorem libero donec</h4>
+						<p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card"><img class="card-img-top w-100 d-block fit-cover" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" style="height: 200px;" />
+					<div class="card-body p-4">
+						<p class="text-primary card-text mb-0">Step 3</p>
+						<h4 class="card-title">Lorem libero donec</h4>
+						<p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--AAAAAAAAAAAAAAAAAAAAAAA-->
+	
+	<div id="aboutPage" class="page container text-light py-4 py-xl-5">
+		<div class="row gy-4 gy-md-0">
+			<div class="col-md-6">
+				<div class="p-xl-5 m-xl-5"><img class="rounded img-fluid w-100 fit-cover" style="min-height: 300px;" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" /></div>
+			</div>
+			<div class="col-md-6 d-md-flex align-items-md-center">
+				<div style="max-width: 350px;">
+					<h2 class="text-uppercase fw-bold">About US</h2>
+					<p class="my-3">Tincidunt laoreet leo, adipiscing taciti tempor. Primis senectus sapien, risus donec ad fusce augue interdum.</p><a class="btn btn-primary btn-lg me-2" role="button" href="#">Button</a><a class="btn btn-outline-primary btn-lg" role="button" href="#">Button</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!--AAAAAAAAAAAAAAAAAAAAAAAA-->
+	
+</div>
+
+
     <nav class="navbar navbar-expand-md fixed-bottom bg-dark">
         <div class="container-fluid">
             <div class="text-center" style="width: 100%;">
@@ -118,6 +219,36 @@
             </div>
         </div>
     </nav>
+	
+	<script>
+        // Hide all pages initially
+        const pages = document.querySelectorAll('.page');
+        pages.forEach(page => page.classList.remove('active'));
+
+
+        // Show the home page initially
+        document.getElementById('homePage').classList.add('active');
+
+        // Add click event listeners to the buttons
+        document.getElementById('home').addEventListener('click', () => {
+            pages.forEach(page => page.classList.remove('active'));
+            document.getElementById('homePage').classList.add('active');
+        });
+
+
+        document.getElementById('about').addEventListener('click', () => {
+            pages.forEach(page => page.classList.remove('active'));
+            document.getElementById('aboutPage').classList.add('active');
+        });
+
+
+        document.getElementById('howtouse').addEventListener('click', () => {
+            pages.forEach(page => page.classList.remove('active'));
+            document.getElementById('howtousePage').classList.add('active');
+        });
+
+    </script>
+	
     <script src="bootstrap.min.js"></script>
 </body>
 

@@ -2,6 +2,33 @@ body {
   animation: bgcolor infinite 30s;
 }
 
+/* Add fade-in animation */
+
+.page {
+  opacity: 0;
+  animation: fadeOut 0.7s ease-in;
+  display: none;
+}
+
+
+.page.active {
+  opacity: 1;
+  animation: fadeIn 0.5s ease-in;
+  display: block;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/*Background changing color*/
+
 @keyframes bgcolor {
   0% {
     background: #00c9ed;
