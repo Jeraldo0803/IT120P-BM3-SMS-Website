@@ -14,3 +14,31 @@ body {
   }
 }
 
+#showunique {
+  width: 200px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 50px;
+  color: #212529;
+  background-color: #ceff89;
+  border-color: #212529;
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+#showunique:hover {
+  background-color: #212529;
+  color: #ceff89;
+  border-color: #212529;
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+#ShowUniqueID {
+  width: max-content;
+  margin-top: 10px;
+  text-align: center;
+
+
+}
