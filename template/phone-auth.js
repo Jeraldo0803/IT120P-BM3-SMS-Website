@@ -1,4 +1,4 @@
-const button = document.getElementById('start-verification');
+const button = document.getElementById('phone-login-btn');
 const recaptchaContainer = document.getElementById('recaptcha-container'); // Optional
 
 button.addEventListener('click', () => {
@@ -22,6 +22,7 @@ button.addEventListener('click', () => {
     .then(confirmationResult => {
       // SMS sent to user's phone
       console.log("Verification code sent!");
+      document.getElementById('statusMessage').textContent = "Verification code sent!";
 
       const verificationCodeInput = document.getElementById('verification-code');
 
@@ -32,10 +33,13 @@ button.addEventListener('click', () => {
           confirmationResult.confirm(verificationCode).then(result => {
             // User phone number is verified!
             console.log("Phone number verified!");
+            document.getElementById('statusMessage').textContent = "Phone number verified!";
+
             // Proceed with your application logic
           }).catch(error => {
             // Handle verification code error
             console.error("Error verifying code:", error);
+            document.getElementById('errorMessage').textContent = "Error verifying code: " + error.message;
           });
         }
       });

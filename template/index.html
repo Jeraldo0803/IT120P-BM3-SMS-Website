@@ -28,6 +28,7 @@
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
     <script defer src="script.js"></script>
     <script async src="phone-auth.js"></script>
+    <script defer src="user_auth.js"></script>
 
 </head>
 
@@ -71,11 +72,19 @@
                 <div class="text-white p-7 p-md-5" style="width: 80%;margin-left: 20%;">
                     <h2 class="fw-bold text-white mb-3"><span style="font-weight: normal !important;">What </span>Tara<span style="font-weight: normal !important;">nsfer is all about?</span></h2>
                     <p class="mb-4">Taransfer is a free online service where people can share any types of files in an instant. Tara! Transfer files with ease, quick, and convinient</p>
-                    <button class="btn btn-light" type="button" onclick="googleLogin()">Login with <strong>Google</strong></button>
+                    <button class="btn btn-light" type="button" onclick="googleLogin()" id="google-login-btn">Login with <strong>Google</strong></button>
+                    <!-- Welcome Message (hidden initially) -->
+                    <div id="welcome-message" style="display: none;">Welcome! <span id="user-name"></span></div>
 
-                    <button class="btn btn-light" type="button" id="start-verification">Login with Phone</button>
-                    <input type="text" id="verification-code" placeholder="Enter Verification Code">
+                    <button class="btn btn-light" type="button" id="phone-login-btn">Login with <strong>Phone</strong></button>
                     <div id="recaptcha-container"></div>
+
+                    <input type="text" id="verification-code" placeholder="Enter Verification Code">
+                    <div id="statusMessage" style="color: green;"></div>
+                    <div id="errorMessage" style="color: red;"></div>
+
+                    <button id="logout-btn" style="display: none;">Logout</button>
+
                 </div>
             </div>
             <div class="col-5 d-md-flex align-items-md-center">
@@ -89,7 +98,8 @@
                             <!-- <h5 class="mb-2" style="margin-top: 16px;">Enter Email</h5> -->
                             <input class="form-control" type="text" placeholder="Enter email" name="email" style="margin-top: 16px;">
                             <input class="btn btn-primary" value="Tara! Send It!" id="upload" onclick="uploadImage()" style="margin-top: 16px;width: 60%;">
-							
+
+
 							<div class="card-body fs-1" style="padding-left:18%;">
 								<div id="ShowUniqueID" block>
 								  <h6 class="mb-2">Unique ID</h6>
@@ -116,9 +126,9 @@
             </div>
         </div>
     </div>
-	
+
 	<!--AAAAAAAAAAAAAAAAAAAAAAAAAAA-->
-	
+
 	<div id="howtousePage" class="page container text-light py-4 py-xl-5">
 		<div class="row mb-5">
 			<div class="col-md-8 col-xl-6 text-center mx-auto">
@@ -192,7 +202,7 @@
 	</div>
 
 	<!--AAAAAAAAAAAAAAAAAAAAAAA-->
-	
+
 	<div id="aboutPage" class="page container text-light py-4 py-xl-5">
 		<div class="row gy-4 gy-md-0">
 			<div class="col-md-6">
@@ -206,9 +216,9 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<!--AAAAAAAAAAAAAAAAAAAAAAAA-->
-	
+
 </div>
 
 
@@ -219,7 +229,7 @@
             </div>
         </div>
     </nav>
-	
+
 	<script>
         // Hide all pages initially
         const pages = document.querySelectorAll('.page');
@@ -248,7 +258,7 @@
         });
 
     </script>
-	
+
     <script src="bootstrap.min.js"></script>
 </body>
 
