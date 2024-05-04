@@ -56,7 +56,21 @@ var messagesRef = firebase.database().ref("image");
       }
     }
 
+    function triggerEmail() {
+      const email = document.getElementById('email').value; // Get email from input field (optional)
+      const triggerUniqueId = document.getElementById('showunique').value;
 
+      const url = 'https://asia-southeast1-taransferrr.cloudfunctions.net/sendEmailOnButtonClick?email=' + email + '&triggerUniqueId=' + triggerUniqueId;
+
+      fetch(url)
+        .then(response => response.text())
+        .then(data => {
+          console.log(data); // Display success or error message
+        })
+        .catch(error => {
+          console.error(error);
+        });
+    }
 
     // Save message to firebase
     function saveMessage(downloadURL) {
@@ -79,6 +93,8 @@ var messagesRef = firebase.database().ref("image");
       document.getElementById("upload").innerHTML = "Upload Successful";
       //Make file input empty
       document.getElementById("fileToUpload").value = "";
+
+      triggerEmail();
     }
 
     function createUniquenumber() {
