@@ -64,7 +64,7 @@
 
                 </ul>
             </div>
-            <button class="btn btn-outline-primary" type="button" style="padding-right: 20px;padding-left: 20px;">Login</button>
+            <!--button class="btn btn-outline-primary" type="button" style="padding-right: 20px;padding-left: 20px;">Login</button-->
         </div>
     </nav>
 <div id="content">
@@ -74,18 +74,18 @@
                 <div class="text-white p-7 p-md-5" style="width: 80%;margin-left: 20%;">
                     <h2 class="fw-bold text-white mb-3"><span style="font-weight: normal !important;">What </span>Tara<span style="font-weight: normal !important;">nsfer is all about?</span></h2>
                     <p class="mb-4">Taransfer is a free online service where people can share any types of files in an instant. Tara! Transfer files with ease, quick, and convinient</p>
-                    <button class="btn btn-light" type="button" onclick="googleLogin()" id="google-login-btn">Login with <strong>Google</strong></button>
+                    <button class="btn btn-light" style="margin-right:5px;" type="button" onclick="googleLogin()" id="google-login-btn">Login with <!--strong>Google</strong--><img height="20px" src="google-logo-transparent.png" alt="Google" /></button>
                     <!-- Welcome Message (hidden initially) -->
-                    <div id="welcome-message" style="display: none;">Welcome! <span id="user-name"></span></div>
+                    <div id="welcome-message" style="display: none;"><h5 style="font-weight: normal;">Welcome! <span id="user-name" style="font-weight: bold;"></span></h3></div>
 
                     <button class="btn btn-light" type="button" id="phone-login-btn">Login with <strong>Phone</strong></button>
                     <div id="recaptcha-container"></div>
 
-                    <input type="text" id="verification-code" placeholder="Enter Verification Code">
+                    <input class="form-control" style="width:54%; margin-top:10px;"type="text" id="verification-code" placeholder="Enter Verification Code">
                     <div id="statusMessage" style="color: green;"></div>
                     <div id="errorMessage" style="color: red;"></div>
 
-                    <button id="logout-btn" style="display: none;">Logout</button>
+                    <button class="btn btn-light" id="logout-btn" style="display: none;">Logout</button>
 
                 </div>
             </div>
@@ -97,9 +97,14 @@
                             <input class="form-control" type="file" id="fileToUpload" name="fileToUpload" style="margin-top: 16px;">
                             <!-- <input class="btn btn-primary" type="submit" value="Tara! Upload!" style="margin-top: 16px;width: 60%;"> -->
                             <!-- <h5 class="mb-2" style="margin-top: 16px;">Enter Email</h5> -->
-                            <input class="form-control" type="text" placeholder="Enter email" id="email" name="email" style="margin-top: 16px;">
+							
+                            <input class="form-control" type="text" placeholder="Enter receiver's email" id="email" name="email" style="margin-top: 16px;">
+							
+							<!--h5>Format of Phone Number is similar to: 639989898168</h5-->
+							
+							<!--input class="form-control" type="text" placeholder="Or Enter Phone Number 63923456789" id="phoneNumber" name="phoneNumber" style="margin-top: 16px;"-->
+							
                             <input class="btn btn-primary" value="Tara! Send It!" id="upload" onclick="uploadImage();" style="margin-top: 16px;width: 60%;">
-
 
 							<div class="card-body fs-1" style="padding-left:18%;">
 								<div id="ShowUniqueID" block>
@@ -132,36 +137,36 @@
 	<div id="howtousePage" class="page container text-light py-4 py-xl-5">
 		<div class="row mb-5">
 			<div class="col-md-8 col-xl-6 text-center mx-auto">
-				<h2>Heading</h2>
-				<p class="w-lg-50">Curae hendrerit donec commodo hendrerit egestas tempus, turpis facilisis nostra nunc. Vestibulum dui eget ultrices.</p>
+				<h2>How to use <strong>Tara</strong>nsfer!</h2>
+				<p class="w-lg-50">Send files and receive files with Taransfer! Here's how to start:</p>
 			</div>
 		</div>
 		<h2>Uploading</h2>
 		<div class="row">
 			<div class="col">
-				<div class="card"><img class="card-img-top w-100 d-block fit-cover" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" style="height: 200px;" />
+				<div class="card"><img class="card-img-top w-100 d-block fit-cover" src="up-step-1.png" style="height: 200px;" />
 					<div class="card-body p-4">
 						<p class="text-primary card-text mb-0">Step 1</p>
-						<h4 class="card-title">Lorem libero donec</h4>
-						<p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+						<h4 class="card-title">Login</h4>
+						<p class="card-text">First login with a Google account. Or with your phone number, which will send you a verification code you can enter in the "Enter verification code" textbox and you should be able to login successfully!</p>
 					</div>
 				</div>
 			</div>
 			<div class="col">
-				<div class="card"><img class="card-img-top w-100 d-block fit-cover" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" style="height: 200px;" />
+				<div class="card"><img class="card-img-top w-100 d-block fit-cover" src="up-step-2.png" style="height: 200px;" />
 					<div class="card-body p-4">
 						<p class="text-primary card-text mb-0">Step 2</p>
-						<h4 class="card-title">Lorem libero donec</h4>
-						<p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+						<h4 class="card-title">Upload your file</h4>
+						<p class="card-text">Click the "browse..." button and select the file of your choosing to be uploaded.</p>
 					</div>
 				</div>
 			</div>
 			<div class="col">
-				<div class="card"><img class="card-img-top w-100 d-block fit-cover" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" style="height: 200px;" />
+				<div class="card"><img class="card-img-top w-100 d-block fit-cover" src="up-step-3.png" style="height: 200px;" />
 					<div class="card-body p-4">
 						<p class="text-primary card-text mb-0">Step 3</p>
-						<h4 class="card-title">Lorem libero donec</h4>
-						<p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+						<h4 class="card-title">Enter email and Send!</h4>
+						<p class="card-text">After selecting a file, enter the receiver's email on the textbox and click "Tara! Send It!" A unique code will also be shown on screen and the same unique code will be sent to their email.</p>
 					</div>
 				</div>
 			</div>
@@ -171,30 +176,33 @@
 		</div>
 		<h2>Downloading</h2>
 		<div class="row">
-			<div class="col">
-				<div class="card"><img class="card-img-top w-100 d-block fit-cover" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" style="height: 200px;" />
-					<div class="card-body p-4">
-						<p class="text-primary card-text mb-0">Step 1</p>
-						<h4 class="card-title">Lorem libero donec</h4>
-						<p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-					</div>
-				</div>
-			</div>
-			<div class="col">
+			<div class="col" style="opacity:0;">
 				<div class="card"><img class="card-img-top w-100 d-block fit-cover" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" style="height: 200px;" />
 					<div class="card-body p-4">
 						<p class="text-primary card-text mb-0">Step 2</p>
-						<h4 class="card-title">Lorem libero donec</h4>
-						<p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+						<h4 class="card-title"></h4>
+						<p class="card-text"></p>
 					</div>
 				</div>
 			</div>
+			
+			
 			<div class="col">
+				<div class="card"><img class="card-img-top w-100 d-block fit-cover" src="down-step-1.png" style="height: 200px;" />
+					<div class="card-body p-4">
+						<p class="text-primary card-text mb-0">Step 1</p>
+						<h4 class="card-title">Enter your Unique code and Download!</h4>
+						<p class="card-text">Yes, it's as simple as that. No Logins required! Just simply enter your unique code and click "Download"</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col" style="opacity:0;">
 				<div class="card"><img class="card-img-top w-100 d-block fit-cover" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" style="height: 200px;" />
 					<div class="card-body p-4">
 						<p class="text-primary card-text mb-0">Step 3</p>
-						<h4 class="card-title">Lorem libero donec</h4>
-						<p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+						<h4 class="card-title"></h4>
+						<p class="card-text"></p>
 					</div>
 				</div>
 			</div>
@@ -206,12 +214,12 @@
 	<div id="aboutPage" class="page container text-light py-4 py-xl-5">
 		<div class="row gy-4 gy-md-0">
 			<div class="col-md-6">
-				<div class="p-xl-5 m-xl-5"><img class="rounded img-fluid w-100 fit-cover" style="min-height: 300px;" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" /></div>
+				<div class="p-xl-5 m-xl-5"><img class="rounded img-fluid w-100 fit-cover" style="min-height: 300px;" src="https://images.unsplash.com/photo-1586244346603-b97b4fdb87e4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDd8YWV1NnJMLWo2ZXd8fGVufDB8fHx8fA%3D%3D" /></div>
 			</div>
 			<div class="col-md-6 d-md-flex align-items-md-center">
 				<div style="max-width: 350px;">
 					<h2 class="text-uppercase fw-bold">About US</h2>
-					<p class="my-3">Tincidunt laoreet leo, adipiscing taciti tempor. Primis senectus sapien, risus donec ad fusce augue interdum.</p><a class="btn btn-primary btn-lg me-2" role="button" href="#">Button</a><a class="btn btn-outline-primary btn-lg" role="button" href="#">Button</a>
+					<p class="my-3">This website project is made in Partial Fulfilment of the requirements for the course Application Development and Emerging Technologies (IT120P_AM4_3Q2324)</p><!--a class="btn btn-primary btn-lg me-2" role="button" href="#">Button</a><a class="btn btn-outline-primary btn-lg" role="button" href="#">Button</a-->
 				</div>
 			</div>
 		</div>
