@@ -32,6 +32,8 @@ var messagesRef = firebase.database().ref("image");
           "state_changed",
           function (snapshot) {
             var progress = (snapshot.bytesTransferred / snapshot.totalBytes * 100).toFixed(2);
+            document.getElementById("uploadProgress").style.display = "block"; // Show progress bar
+            document.getElementById("uploadProgress").value = progress;
             console.log("Upload is " + progress + "% done");
             document.getElementById("upload").innerHTML = "Uploading"+" "+progress+"%...";
           },
@@ -44,6 +46,8 @@ var messagesRef = firebase.database().ref("image");
               console.log("File available at", downloadURL);
               saveMessage(downloadURL);
             });
+            document.getElementById("uploadProgress").style.display = "none"; // Hide progress bar when complete
+
           }
         );
       } else {
